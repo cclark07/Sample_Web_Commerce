@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Software Traders - Registration</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Swis721_Cn_BT_400.font.js"></script>
+<script type="text/javascript" src="js/Swis721_Cn_BT_700.font.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script>
+<!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+	<style type="text/css">
+		.bg{ behavior: url(js/PIE.htc); }
+	</style>
+<![endif]-->
+<!--[if lt IE 7]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
+		</div>
+<![endif]-->
+
+<style>
+  .button {background: #60b000;font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFF;} 
+</style>
+
+<SCRIPT>
+
+function CheckForm( theform )
+{
+	var bMissingFields = false;
+	var strFields = "";
+	var bPassMatch = true;
+	
+	if( theform.first.value == '' ){
+		bMissingFields = true;
+		strFields += "     First Name\n";
+	}
+	if( theform.last.value == '' ){
+		bMissingFields = true;
+		strFields += "     Last Name\n";
+	}
+	if( theform.email.value == '' ){
+		bMissingFields = true;
+		strFields += "     Email Address\n";
+	}
+	if( theform.username.value == '' ){
+		bMissingFields = true;
+		strFields += "     Username\n";
+	}
+	if( theform.password.value == '' ){
+		bMissingFields = true;
+		strFields += "     Password\n";
+	}
+	if( theform.password_conf.value == '' ){
+		bMissingFields = true;
+		strFields += "     Password Confirmation\n";
+	}
+	if( theform.sanswer.value == '' ){
+		bMissingFields = true;
+		strFields += "     Secret Question Answer\n";
+	}
+	if( theform.address.value == '' ){
+		bMissingFields = true;
+		strFields += "     Address\n";
+	}
+	if( theform.city.value == '' ){
+		bMissingFields = true;
+		strFields += "     City\n";
+	}
+	if( theform.postalcode.value == '' ){
+		bMissingFields = true;
+		strFields += "     Postal Code\n";
+	}
+	if( theform.country.value == '' ){
+		bMissingFields = true;
+		strFields += "     Country\n";
+	}
+		
+	if( bMissingFields ) {
+		alert( "I'm sorry, but you must provide the following field(s) before continuing:\n" + strFields );
+		return false;
+	}
+	
+	if ( theform.password.value != theform.password_conf.value ){
+		alert( "I'm sorry, but the password and password confirmation do not match." )
+		return false;
+	}
+	
+	return true;
+}
+</SCRIPT>
+
+</head>
+<body id="page5">
+	<div class="body1">
+	<div class="body2">
+	<div class="body5">
+		<div class="main">
+<!-- header -->
+			<header>
+				<div class="wrapper">
+				<h1><a href="index.html"><img src="images/traders.png"></a></h1>
+				<nav>
+					<ul id="menu">
+						<li id="nav1"><a href="index.html">Home<span>Welcome!</span></a></li>
+						<li id="nav4"><a href="Products.html">Products<span>The best</span></a></li>
+						<li id="nav2" class="active"><a href="Registration.html">SignUp/Logon<span>join us</span></a></li>
+						<li id="nav5"><a href="Contacts.html">Contact Us<span>find us</span></a></li>
+						<li id="nav3"><a href="admin/default.asp">Admin<span>Login</span></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+<!-- header end-->
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="body3">
+		<div class="main">
+<!-- content -->
+			<article id="content">
+				<div class="wrapper">
+					<section class="col1">
+					<h2 class="under">Sign Up</h2>
+						<form id="signup" method="post" action="signup.asp" onSubmit="return CheckForm(this)">
+						<p><font color="red">* ALL FIELDS ARE REQUIRED!</font></p>
+						<div>
+							<div  class="wrapper"><span>First Name:</span> <input type="text" size="18" name="first" class="input"></div>
+							<div  class="wrapper"><span>Last Name:</span> <input type="text" size="18" name="last" class="input"></div>
+							<div  class="wrapper"><span>Gender:</span> <input type="radio" name="sex" value="male" name="msex"> Male          
+ 						 		      <input type="radio" name="sex" value="female" name="fsex"> Female</div>
+							<div  class="wrapper"><span>Date Of Birth:</span> <select name="month" class="opt">
+									<option value="Month">Month</option>
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December">December</option>									
+										</select>
+									     <select name="day" class="opt">
+									<option value="Day">Day</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>									
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>								
+										</select>
+							<input type="text" value="Year" class="dob"></div>
+						<div  class="wrapper"><span>Email:</span> <input type="text" class="input" name="email"></div>
+						<div  class="wrapper"><span>Username:</span> <input type="text" class="input" name="username"></div>
+						<div  class="wrapper"><span>Password:</span> <input type="password" class="input" name="password"></div>
+						<div  class="wrapper"><span>Confirm Password:</span> <input type="password" class="input" name="password_conf"></div>
+						<div  class="wrapper"><span>Secret Question:</span> <select name="squestion" class="opt">
+									<option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+									<option value="What is the name of the street you grew up on?">What is the name of the street you grew up on?</option>
+									<option value="What was the name of your first pet?">What was the name of your first pet?</option>
+									<option value="What is your father's middle name">What is your father's middle name?</option>
+								</select></div>
+						<div  class="wrapper"><span>Secret Question Answer:</span> <input type="text" class="input" name="sanswer"></div>
+						<div  class="wrapper"><span>Address:</span> <input type="text" class="input" name="address"></div> 
+						<div  class="wrapper"><span>City:</span> <input type="text" class="input" name="city"></div>
+						<div  class="wrapper"><span>Postal Code:</span> <input type="text" class="input" name="postalcode"></div>
+						<div  class="wrapper"><span>Country:</span> <input type="text" class="input" name="country"></div>		
+							
+							<br>
+							<input name="Submit" type="submit" Value="Submit"> <INPUT type=RESET value="Clear Form">
+						</div>
+					</form>
+					</section>
+					<section class="col2 pad_left1">
+						<h2 class="under">Sign In</h2>
+						<form id="signin" method="post" action="verify.asp">
+						<p> Already a member? Sign in Here.</p>
+						<div  class="wrapper">
+						
+								<div><span>Username:</span>
+									<input type="text" class="input" name="logonuser"></div>
+								<div><span>Password:</span>
+									<input type="password" class="input" name="logonpassword"></div>
+						
+							</div>
+							</br>
+							<input type=submit Value="Sign In"> <INPUT type=RESET value="Clear">
+							</form>
+						</div>
+					</section>
+				</div>
+
+			</article>
+		</div>
+	</div>
+	<div class="body4">
+		<div class="main">
+			<article id="content2">
+				<div class="wrapper">
+					<section class="col3">
+						<h4>Why Us?</h4>
+						<ul class="list1">
+							<li><a href="#">Easy</a></li>
+							<li><a href="#">Safe</a></li>
+							<li><a href="#">Fast </a></li>
+							<li><a href="#">Affordable</a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Address</h4>
+						<ul class="address">
+							<li><span>Country:</span>Cayman Islands</li>
+							<li><span>City:</span>Grand Cayman</li>
+							<li><span>Phone:</span>1 (345) 623 8224</li>
+							<li><span>Email:</span><a href="mailto:">info@setraders.com</a></li>
+						</ul>
+					</section>
+					<section class="col3 pad_left2">
+						<h4>Follow Us</h4>
+						<ul id="icons">
+							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
+							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
+							<li><a href="#"><img src="images/icon3.jpg" alt="">LinkedIn</a></li>
+							<li><a href="#"><img src="images/icon4.jpg" alt="">Delicious</a></li>
+						</ul>
+					</section>
+					<section class="col3 right">
+						<h4>Newsletter</h4>
+						<form id="newsletter" method="post">
+							<div>
+								<div class="wrapper">
+									<input class="input" type="text" value="Type Your Email Here"  onblur="if(this.value=='') this.value='Type Your Email Here'" onFocus="if(this.value =='Type Your Email Here' ) this.value=''" >
+								</div>
+								<a href="#" class="button" onClick="document.getElementById('newsletter').submit()">Subscribe</a>
+							</div>
+						</form>
+					</section>
+				</div>
+			</article>
+<!-- content end -->
+		</div>
+	</div>
+	
+<script type="text/javascript"> Cufon.now(); </script>
+<script>
+	$(document).ready(function() {
+		tabs.init();
+	})
+</script>
+</body>
+</html>
